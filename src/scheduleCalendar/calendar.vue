@@ -49,6 +49,7 @@ export default {
         updateView(year, month) {
             this.year = year
             this.month = month
+            this.$emit('select-change', year, month)
         },
         cellDragenter(e, date, type, index) {
             this.$emit('event-dragenter', e, this.dragItem, date)
